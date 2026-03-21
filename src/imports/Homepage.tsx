@@ -218,7 +218,7 @@ function Frame65() {
 
 function HeroSliderImages() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] items-start relative w-full">
+    <div className="content-stretch flex flex-col items-start relative w-full">
       <Frame67 />
       <Frame66 />
       <Frame65 />
