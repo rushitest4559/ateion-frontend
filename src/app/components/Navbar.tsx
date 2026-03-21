@@ -17,11 +17,11 @@ function LogoComponent() {
   );
 }
 
-function NavButton({ 
-  children, 
-  onClick 
-}: { 
-  children: React.ReactNode; 
+function NavButton({
+  children,
+  onClick
+}: {
+  children: React.ReactNode;
   onClick?: () => void;
 }) {
   return (
@@ -32,7 +32,7 @@ function NavButton({
     >
       <Button
         variant="secondary"
-        className="h-[34px] px-[20px] rounded-full bg-[rgba(235,235,235,0.8)] hover:bg-[rgba(215,215,215,0.95)] text-[#292929] font-bold text-[13px] font-['Manrope']"
+        className="h-[34px] px-[20px] rounded-full bg-[rgba(235,235,235,0.8)] hover:bg-[rgba(215,215,215,0.95)] text-[#292929] font-bold text-[13px] !font-['Manrope']"
       >
         {children}
       </Button>
@@ -42,7 +42,7 @@ function NavButton({
 
 function NavLinks() {
   const navigate = useNavigate();
-  
+
   return (
     <div className="flex gap-[16px] items-center">
       <NavButton onClick={() => navigate('/')}>
@@ -70,7 +70,7 @@ function NavActions() {
       onClick={() => navigate('/contact')}
     >
       <Button
-        className="h-[36px] px-[20px] rounded-full bg-[#fb4444] hover:bg-[#ff5555] font-bold text-[13px] font-['Manrope']"
+        className="h-[36px] px-[20px] rounded-full bg-[#fb4444] hover:bg-[#ff5555] font-bold text-[13px] !font-['Manrope']"
       >
         Get Connected
       </Button>
