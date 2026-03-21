@@ -131,7 +131,7 @@ function FooterColumnsContainer() {
 
 function FooterMainArea() {
   return (
-    <div className="bg-[#f7f3eb] relative shrink-0 w-full py-[48px]">
+    <div className="bg-white relative shrink-0 w-full py-[48px]">
       <div className="content-stretch flex flex-col items-center justify-center relative size-full">
         <FooterColumnsContainer />
       </div>
