@@ -1,168 +1,236 @@
-/* =========================================================
-   ATEION DESIGN SYSTEM - DESIGN TOKENS
-   =========================================================
-   This file contains all design tokens for the Ateion website.
-   All colors, spacing, typography, and effects should use these tokens.
-   ========================================================= */
+/**
+ * ============================================================================
+ * ATEION DESIGN SYSTEM - COMPREHENSIVE TOKENS
+ * ============================================================================
+ * 
+ * This is the single source of truth for all design decisions in the Ateion
+ * website. All colors, spacing, typography, shadows, and animations must use
+ * these tokens. NO hardcoded values allowed.
+ * 
+ * Version: 2.0.0
+ * Last Updated: 2026
+ * Maintained by: Ateion Development Team
+ * ============================================================================
+ */
 
 :root {
-  /* ─── COLORS ────────────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     COLOR PALETTE
+     ────────────────────────────────────────────────────────────────────────── */
   
   /* Primary Brand Colors */
-  --color-primary: #fb4444;           /* Red - Primary CTA, accents */
-  --color-primary-hover: #ff5555;     /* Red hover state */
-  --color-primary-light: rgba(251, 68, 68, 0.1);
-  --color-primary-dark: #e03e3e;
+  --color-primary-red: #fb4444;
+  --color-primary-red-hover: #ff5555;
+  --color-primary-red-light: rgba(251, 68, 68, 0.1);
+  --color-primary-red-dark: #e03e3e;
   
-  /* Neutral Colors */
-  --color-neutral-0: #ffffff;         /* White - backgrounds */
-  --color-neutral-50: #f9f9f9;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
-  --color-neutral-950: #0a0a0a;
+  /* Neutral Grays (Cool grays for modern feel) */
+  --color-gray-0: #ffffff;
+  --color-gray-25: #fafafa;
+  --color-gray-50: #f5f5f5;
+  --color-gray-100: #e5e5e5;
+  --color-gray-200: #d4d4d4;
+  --color-gray-300: #a3a3a3;
+  --color-gray-400: #737373;
+  --color-gray-500: #525252;
+  --color-gray-600: #404040;
+  --color-gray-700: #262626;
+  --color-gray-800: #171717;
+  --color-gray-900: #0a0a0a;
   
-  /* Brand Background */
-  --color-bg-primary: #f7f3eb;        /* Warm off-white - main background */
-  --color-bg-secondary: #ffffff;      /* White - cards, surfaces */
-  --color-bg-dark: #1e1632;           /* Deep navy - footer, dark sections */
+  /* Brand Backgrounds */
+  --color-bg-primary: #f7f3eb;        /* Warm off-white - MAIN SITE BG */
+  --color-bg-secondary: #ffffff;      /* White - Cards, surfaces */
+  --color-bg-tertiary: #faf9f7;       /* Light warm - Alternate sections */
+  --color-bg-dark: #1e1632;           /* Deep navy - Footer */
   --color-bg-black: #202020;          /* Black cards */
+  --color-bg-nav-button: rgba(235, 235, 235, 0.8);
+  --color-bg-nav-button-hover: rgba(215, 215, 215, 0.95);
   
   /* Text Colors */
   --color-text-primary: #1a1a1a;      /* Headings, primary text */
-  --color-text-secondary: #292929;    /* Body text */
+  --color-text-secondary: #292929;    /* Body text, nav buttons */
+  --color-text-tertiary: #525252;     /* Muted text */
   --color-text-muted: rgba(0, 0, 0, 0.6);
   --color-text-subtle: rgba(0, 0, 0, 0.4);
   --color-text-inverse: #ffffff;
+  --color-text-link: #fb4444;
   
   /* Border Colors */
   --color-border-light: rgba(0, 0, 0, 0.08);
   --color-border-medium: rgba(0, 0, 0, 0.15);
   --color-border-dark: rgba(0, 0, 0, 0.3);
+  --color-border-input: rgba(0, 0, 0, 0.2);
   
   /* Semantic Colors */
   --color-success: #22c55e;
+  --color-success-light: #dcfce7;
   --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
   --color-error: #ef4444;
+  --color-error-light: #fee2e2;
   --color-info: #3b82f6;
+  --color-info-light: #dbeafe;
   
-  /* ─── TYPOGRAPHY ────────────────────────────────────────── */
+  /* Special Colors */
+  --color-purple-card: #aa9dff;
+  --color-purple-card-dark: #8b7dff;
+  --color-red-card: #ff6b6b;
+  --color-red-card-dark: #ff5252;
+  --color-grey-card: #dadada;
+  --color-grey-card-dark: #c9c9c9;
+  
+  /* ──────────────────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ────────────────────────────────────────────────────────────────────────── */
   
   /* Font Families */
-  --font-heading: 'OV Soge', sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'SF Pro Display', 'Courier New', monospace;
-  --font-accent: 'Manrope', sans-serif;
-  --font-footer: 'Lato', sans-serif;
+  --font-family-heading: 'OV Soge', sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-accent: 'Manrope', sans-serif;
+  --font-family-mono: 'SF Pro Display', 'Courier New', monospace;
+  --font-family-footer: 'Lato', sans-serif;
   
-  /* Font Sizes - Mobile First */
-  --text-xs: 11px;
-  --text-sm: 12px;
-  --text-base: 14px;
-  --text-lg: 16px;
-  --text-xl: 18px;
-  --text-2xl: 20px;
-  --text-3xl: 24px;
-  --text-4xl: 32px;
-  --text-5xl: 36px;
-  --text-6xl: 48px;
-  --text-7xl: 61px;
-  --text-8xl: 72px;
+  /* Font Sizes - Based on 1.25 scale (Major Third) */
+  --font-size-xs: 0.6875rem;    /* 11px */
+  --font-size-sm: 0.75rem;      /* 12px */
+  --font-size-base: 0.875rem;   /* 14px */
+  --font-size-lg: 1rem;         /* 16px */
+  --font-size-xl: 1.125rem;     /* 18px */
+  --font-size-2xl: 1.25rem;     /* 20px */
+  --font-size-3xl: 1.5rem;      /* 24px */
+  --font-size-4xl: 2rem;        /* 32px */
+  --font-size-5xl: 2.25rem;     /* 36px */
+  --font-size-6xl: 3rem;        /* 48px */
+  --font-size-7xl: 3.8125rem;   /* 61px */
+  --font-size-8xl: 4.5rem;      /* 72px */
   
   /* Font Weights */
-  --font-light: 300;
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   
   /* Line Heights */
-  --leading-none: 1;
-  --leading-tight: 1.25;
-  --leading-snug: 1.375;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.625;
-  --leading-loose: 2;
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
   
   /* Letter Spacing */
-  --tracking-tighter: -0.05em;
-  --tracking-tight: -0.025em;
-  --tracking-normal: 0;
-  --tracking-wide: 0.025em;
-  --tracking-wider: 0.05em;
-  --tracking-widest: 0.1em;
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
   
-  /* ─── SPACING ───────────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     SPACING SYSTEM (4px Base Grid)
+     ────────────────────────────────────────────────────────────────────────── */
   
-  /* Base spacing unit: 4px */
   --space-0: 0;
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 20px;
-  --space-6: 24px;
-  --space-8: 32px;
-  --space-10: 40px;
-  --space-12: 48px;
-  --space-16: 64px;
-  --space-20: 80px;
-  --space-24: 96px;
-  --space-32: 128px;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  --space-40: 10rem;    /* 160px */
+  --space-48: 12rem;    /* 192px */
   
-  /* ─── SIZING ────────────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     SIZING
+     ────────────────────────────────────────────────────────────────────────── */
   
   /* Component Heights */
-  --height-nav-button: 36px;
-  --height-nav-button-small: 32px;
-  --height-cta-button: 36px;
-  --height-input: 40px;
+  --height-nav: 5rem;                 /* 80px - Total navbar height */
+  --height-nav-button: 2.25rem;       /* 36px - Nav pill buttons */
+  --height-nav-button-sm: 2rem;       /* 32px - Small nav buttons */
+  --height-cta: 2.25rem;              /* 36px - CTA buttons */
+  --height-input: 2.5rem;             /* 40px - Form inputs */
+  --height-hero: 41.5625rem;          /* 665px - Hero section */
+  --height-card-lg: 31.5rem;          /* 504px - Large cards */
+  --height-card-md: 23.5625rem;       /* 377px - Medium cards */
+  --height-footer: 4rem;              /* 64px - Copyright bar */
   
   /* Max Widths */
-  --max-width-container: 1280px;
-  --max-width-content: 1024px;
-  --max-width-narrow: 768px;
+  --max-width-container: 80rem;       /* 1280px */
+  --max-width-content: 64rem;         /* 1024px */
+  --max-width-narrow: 48rem;          /* 768px */
+  --max-width-text: 45rem;            /* 720px - Optimal reading width */
   
-  /* ─── BORDER RADIUS ─────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     BORDER RADIUS
+     ────────────────────────────────────────────────────────────────────────── */
   
   --radius-none: 0;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
-  --radius-full: 9999px;
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.25rem;  /* 20px */
+  --radius-3xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;  /* Pill shape */
   
-  /* ─── SHADOWS ───────────────────────────────────────────── */
+  /* Component Border Radius */
+  --radius-nav-button: var(--radius-full);
+  --radius-card: var(--radius-2xl);
+  --radius-button: var(--radius-full);
+  --radius-input: var(--radius-lg);
+  
+  /* ──────────────────────────────────────────────────────────────────────────
+     SHADOWS
+     ────────────────────────────────────────────────────────────────────────── */
   
   --shadow-none: none;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   
   /* Custom Shadows */
   --shadow-button: 0 4px 12px rgba(251, 68, 68, 0.25);
   --shadow-button-hover: 0 6px 20px rgba(251, 68, 68, 0.35);
   --shadow-card: 0 4px 20px rgba(25, 33, 61, 0.04);
   --shadow-card-hover: 0 8px 30px rgba(25, 33, 61, 0.08);
+  --shadow-nav: 0 2px 16px rgba(0, 0, 0, 0.07);
+  --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   
-  /* ─── TRANSITIONS ───────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     TRANSITIONS & ANIMATION
+     ────────────────────────────────────────────────────────────────────────── */
   
-  --transition-fast: 150ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
-  --transition-slower: 500ms ease;
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slower: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slowest: 700ms cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* ─── Z-INDEX ───────────────────────────────────────────── */
+  /* Animation Easing */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
   
+  /* ──────────────────────────────────────────────────────────────────────────
+     Z-INDEX SCALE
+     ────────────────────────────────────────────────────────────────────────── */
+  
+  --z-base: 0;
   --z-dropdown: 100;
   --z-sticky: 200;
   --z-fixed: 300;
@@ -172,19 +240,45 @@
   --z-tooltip: 700;
   --z-notification: 800;
   
-  /* ─── BREAKPOINTS ───────────────────────────────────────── */
+  /* ──────────────────────────────────────────────────────────────────────────
+     BREAKPOINTS (Mobile-First)
+     ────────────────────────────────────────────────────────────────────────── */
   
-  /* Mobile First - these are the MIN widths for each breakpoint */
   --breakpoint-sm: 640px;    /* Small tablets */
   --breakpoint-md: 768px;    /* Tablets */
   --breakpoint-lg: 1024px;   /* Laptops */
   --breakpoint-xl: 1280px;   /* Desktops */
   --breakpoint-2xl: 1536px;  /* Large screens */
+  
+  /* ──────────────────────────────────────────────────────────────────────────
+     COMPONENT SPECIFICATIONS
+     ────────────────────────────────────────────────────────────────────────── */
+  
+  /* Navigation */
+  --nav-padding-x: var(--space-6);      /* 24px desktop */
+  --nav-padding-x-mobile: var(--space-4); /* 16px mobile */
+  --nav-padding-y: var(--space-5);      /* 20px */
+  --nav-gap: var(--space-4);            /* 16px between nav items */
+  --nav-gap-mobile: var(--space-3);     /* 12px mobile */
+  
+  /* Buttons */
+  --button-padding-x: var(--space-5);   /* 20px */
+  --button-font-size: var(--font-size-sm); /* 12px mobile */
+  --button-font-size-desktop: var(--font-size-base); /* 14px desktop */
+  
+  /* Cards */
+  --card-padding: var(--space-8);       /* 32px */
+  --card-gap: var(--space-6);           /* 24px between cards */
+  
+  /* Footer */
+  --footer-padding-y: var(--space-12);  /* 48px */
+  --footer-column-gap: var(--space-16); /* 64px */
+  --footer-font-size: var(--font-size-base); /* 14px */
 }
 
-/* =========================================================
-   GLOBAL STYLES
-   ========================================================= */
+/* ============================================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================================ */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -196,43 +290,48 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  font-weight: var(--font-regular);
-  line-height: var(--leading-normal);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
   color: var(--color-text-primary);
   background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
   color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
 }
 
-h1 { font-size: var(--text-8xl); }
-h2 { font-size: var(--text-6xl); }
-h3 { font-size: var(--text-4xl); }
-h4 { font-size: var(--text-3xl); }
-h5 { font-size: var(--text-2xl); }
-h6 { font-size: var(--text-xl); }
+h1 { font-size: var(--font-size-8xl); }
+h2 { font-size: var(--font-size-6xl); }
+h3 { font-size: var(--font-size-4xl); }
+h4 { font-size: var(--font-size-3xl); }
+h5 { font-size: var(--font-size-2xl); }
+h6 { font-size: var(--font-size-xl); }
 
 p {
   margin-bottom: var(--space-4);
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-text-link);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-red-hover);
 }
 
 img {
@@ -242,15 +341,15 @@ img {
 }
 
 button {
-  font-family: var(--font-accent);
+  font-family: var(--font-family-accent);
   cursor: pointer;
   border: none;
   background: none;
 }
 
-/* =========================================================
+/* ============================================================================
    UTILITY CLASSES
-   ========================================================= */
+   ============================================================================ */
 
 .container {
   max-width: var(--max-width-container);
@@ -283,22 +382,45 @@ button {
 .gap-12 { gap: var(--space-12); }
 .gap-16 { gap: var(--space-16); }
 
-/* =========================================================
-   RESPONSIVE UTILITIES
-   ========================================================= */
+/* ============================================================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================================================ */
 
 @media (max-width: 767px) {
   html {
     font-size: 14px;
   }
   
-  h1 { font-size: var(--text-6xl); }
-  h2 { font-size: var(--text-5xl); }
-  h3 { font-size: var(--text-3xl); }
+  h1 { font-size: var(--font-size-6xl); }
+  h2 { font-size: var(--font-size-5xl); }
+  h3 { font-size: var(--font-size-3xl); }
 }
 
 @media (min-width: 768px) {
   .container {
     padding: 0 var(--space-16);
+  }
+}
+
+/* ============================================================================
+   ACCESSIBILITY
+   ============================================================================ */
+
+/* Focus styles for all interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-primary-red);
+  outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
