@@ -143,7 +143,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-transparent">
         <div className="flex items-center justify-between px-[24px] py-[20px] w-full max-w-[1280px] mx-auto">
           <button onClick={() => navigate('/')} aria-label="Go to homepage">
             <LogoComponent />
