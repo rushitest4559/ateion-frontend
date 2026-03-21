@@ -452,8 +452,8 @@ function ExploreButton() {
 
 function HeroTextBlock() {
   return (
-    <div className="flex flex-col items-start px-[64px] w-full">
-      <p className="leading-[normal] not-italic text-[72px] text-black w-full mb-6" style={{ fontFamily: "'OV Soge', sans-serif" }}>Reimagining Education</p>
+    <div className="flex flex-col items-start px-[16px] md:px-[64px] w-full">
+      <p className="leading-[normal] not-italic text-[36px] md:text-[72px] text-black w-full mb-6" style={{ fontFamily: "'OV Soge', sans-serif" }}>Reimagining Education</p>
       <ExploreButton />
     </div>
   );
@@ -461,7 +461,7 @@ function HeroTextBlock() {
 
 function HeroHeaderSection() {
   return (
-    <div className="flex flex-col items-start w-full gap-[40px]">
+    <div className="flex flex-col items-start w-full gap-[24px] md:gap-[40px]">
       <HeroSliderHeader />
       <HeroTextBlock />
     </div>
@@ -470,24 +470,24 @@ function HeroHeaderSection() {
 
 function PurpleCapabilityCardText() {
   return (
-    <div className="content-stretch flex flex-col gap-[133px] items-start not-italic relative shrink-0 text-black w-[232px]">
+    <div className="content-stretch flex flex-col gap-[80px] md:gap-[133px] items-start not-italic relative shrink-0 text-black w-full md:w-[232px]">
       <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] min-w-full relative shrink-0 text-[0px] w-[min-content]">
-        <span className="leading-[normal] text-[24px]">{`Because `}</span>
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[24px]">{`marks `}</span>
-        <span className="leading-[normal] text-[24px]">measure memory.</span>
-        <span className="font-['IBM_Plex_Sans:SemiBold_Italic',sans-serif] italic leading-[normal] text-[24px]">{` `}</span>
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[32px]">Capability</span>
-        <span className="leading-[normal] text-[24px]">{` `}</span>
-        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[normal] text-[24px]">measures the future.</span>
+        <span className="leading-[normal] text-[18px] md:text-[24px]">{`Because `}</span>
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[18px] md:text-[24px]">{`marks `}</span>
+        <span className="leading-[normal] text-[18px] md:text-[24px]">measure memory.</span>
+        <span className="font-['IBM_Plex_Sans:SemiBold_Italic',sans-serif] italic leading-[normal] text-[18px] md:text-[24px]">{` `}</span>
+        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[24px] md:text-[32px]">Capability</span>
+        <span className="leading-[normal] text-[18px] md:text-[24px]">{` `}</span>
+        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[normal] text-[18px] md:text-[24px]">measures the future.</span>
       </p>
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[normal] relative shrink-0 text-[20px] w-[190px] whitespace-pre-wrap">{`Ateion is the world’s leading Capability-First Education ecosystem  integrating AI literacy, innovation, and measurable readiness into modern schooling.`}</p>
+      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[normal] relative shrink-0 text-[14px] md:text-[20px] w-full md:w-[190px] whitespace-pre-wrap">{`Ateion is the world's leading Capability-First Education ecosystem  integrating AI literacy, innovation, and measurable readiness into modern schooling.`}</p>
     </div>
   );
 }
 
 function PurpleCapabilityCardInner() {
   return (
-    <div className="bg-[#dadada] content-stretch flex h-[504px] items-start pb-[31px] pl-[17px] pt-[18px] relative rounded-[15px] shrink-0 w-[249px]">
+    <div className="bg-[#dadada] content-stretch flex h-auto md:h-[504px] items-start pb-[24px] md:pb-[31px] pl-[12px] md:pl-[17px] pt-[12px] md:pt-[18px] relative rounded-[15px] shrink-0 w-full md:w-[249px]">
       <PurpleCapabilityCardText />
     </div>
   );
@@ -495,8 +495,8 @@ function PurpleCapabilityCardInner() {
 
 function PurpleCapabilityCardOuter() {
   return (
-    <div className="content-stretch flex items-center relative shrink-0 w-full">
-      <div className="bg-[#aa9dff] h-[504px] rounded-bl-[13px] rounded-tl-[13px] shrink-0 flex-1" />
+    <div className="content-stretch flex flex-col md:flex-row items-center relative shrink-0 w-full gap-[16px] md:gap-0">
+      <div className="bg-[#aa9dff] h-[200px] md:h-[504px] rounded-bl-[13px] rounded-tl-[13px] shrink-0 flex-1 w-full" />
       <PurpleCapabilityCardInner />
     </div>
   );
@@ -504,9 +504,9 @@ function PurpleCapabilityCardOuter() {
 
 function GlobalAlignedTitle() {
   return (
-    <div className="content-stretch flex flex-col gap-[26px] items-start relative shrink-0 w-[262px]">
-      <p className="leading-[normal] min-w-full not-italic relative shrink-0 text-[36px] text-white tracking-[0.72px] w-[min-content]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Globally Aligned with</p>
-      <div className="h-[186px] relative rounded-[16px] shrink-0 w-[251px]" data-name="image 9">
+    <div className="content-stretch flex flex-col gap-[16px] md:gap-[26px] items-start relative shrink-0 w-full md:w-[262px]">
+      <p className="leading-[normal] min-w-full not-italic relative shrink-0 text-[24px] md:text-[36px] text-white tracking-[0.72px] w-[min-content]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Globally Aligned with</p>
+      <div className="h-[140px] md:h-[186px] relative rounded-[16px] shrink-0 w-full md:w-[251px]" data-name="image 9">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgImage9} />
       </div>
     </div>
@@ -515,9 +515,9 @@ function GlobalAlignedTitle() {
 
 function GlobalAlignedContent() {
   return (
-    <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col md:flex-row gap-[16px] items-center relative shrink-0 w-full">
       <GlobalAlignedTitle />
-      <div className="h-[312px] relative rounded-[9px] shrink-0 w-[221px]" data-name="image 7">
+      <div className="h-[200px] md:h-[312px] relative rounded-[9px] shrink-0 w-full md:w-[221px]" data-name="image 7">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src={imgImage7} />
       </div>
     </div>
@@ -526,7 +526,7 @@ function GlobalAlignedContent() {
 
 function GlobalAlignedBlackCard() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[377px] items-start pb-[32px] pt-[33px] px-[31px] relative rounded-[19px] shrink-0 flex-1">
+    <div className="bg-[#202020] content-stretch flex flex-col h-auto md:h-[377px] items-start pb-[24px] md:pb-[32px] pt-[24px] md:pt-[33px] px-[20px] md:px-[31px] relative rounded-[19px] shrink-0 w-full flex-1">
       <GlobalAlignedContent />
     </div>
   );
@@ -534,15 +534,15 @@ function GlobalAlignedBlackCard() {
 
 function RedIntelligenceTitle() {
   return (
-    <div className="h-[132px] relative shrink-0 w-[249px]">
-      <p className="absolute leading-[normal] left-0 not-italic text-[24px] text-black top-0 w-[249px]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Education is not broken. Its measurement system is :</p>
+    <div className="h-auto md:h-[132px] relative shrink-0 w-full md:w-[249px]">
+      <p className="absolute leading-[normal] left-0 not-italic text-[18px] md:text-[24px] text-black top-0 w-full md:w-[249px]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Education is not broken. Its measurement system is :</p>
     </div>
   );
 }
 
 function RedIntelligenceTop() {
   return (
-    <div className="content-stretch flex items-start relative shrink-0">
+    <div className="content-stretch flex flex-col md:flex-row items-start relative shrink-0 w-full">
       <RedIntelligenceTitle />
       <VerticalTicker />
     </div>
@@ -553,9 +553,9 @@ function RedIntelligenceContent() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
       <RedIntelligenceTop />
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] h-[87px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
-        <span className="leading-[33px] text-[20px]">{`Ateion replaces memory-based validation with `}</span>
-        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[33px] text-[36px]">Capability-based intelligence.</span>
+      <p className="font-['SF_Pro_Display:Medium',sans-serif] h-auto md:h-[87px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
+        <span className="leading-[28px] md:leading-[33px] text-[16px] md:text-[20px]">{`Ateion replaces memory-based validation with `}</span>
+        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[28px] md:leading-[33px] text-[24px] md:text-[36px]">Capability-based intelligence.</span>
       </p>
     </div>
   );
@@ -563,7 +563,7 @@ function RedIntelligenceContent() {
 
 function RedIntelligenceCard() {
   return (
-    <div className="bg-[#ff6b6b] content-stretch flex flex-col h-[377px] items-start pb-[9px] pl-[51px] pr-[25px] pt-[33px] relative rounded-[19px] shrink-0 flex-1">
+    <div className="bg-[#ff6b6b] content-stretch flex flex-col h-auto md:h-[377px] items-start pb-[9px] pl-[24px] md:pl-[51px] pr-[20px] md:pr-[25px] pt-[24px] md:pt-[33px] relative rounded-[19px] shrink-0 w-full flex-1">
       <RedIntelligenceContent />
     </div>
   );
@@ -571,7 +571,7 @@ function RedIntelligenceCard() {
 
 function HeroMetricsRow() {
   return (
-    <div className="content-stretch flex gap-[19px] items-center relative shrink-0 w-full">
+    <div className="content-stretch flex flex-col md:flex-row gap-[16px] md:gap-[19px] items-center relative shrink-0 w-full">
       <GlobalAlignedBlackCard />
       <RedIntelligenceCard />
     </div>
