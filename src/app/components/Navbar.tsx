@@ -103,7 +103,7 @@ function NavActions() {
 
 function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const navigate = useNavigate();
-  
+
   const handleNavigate = (path: string) => {
     navigate(path);
     onClose();
@@ -119,7 +119,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
           />
           {/* Menu */}
           <motion.div
@@ -127,12 +127,12 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed right-0 top-0 h-full w-[280px] bg-white z-50 md:hidden shadow-lg"
+            className="fixed right-0 top-0 h-full w-[280px] bg-white/95 backdrop-blur-md z-50 md:hidden shadow-lg"
           >
             <div className="flex flex-col p-6 gap-4">
               <button
                 onClick={onClose}
-                className="self-end text-2xl text-gray-600 hover:text-black"
+                className="self-end text-2xl text-gray-600 hover:text-black transition-colors"
                 aria-label="Close menu"
               >
                 ✕
@@ -164,7 +164,7 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 </button>
                 <button
                   onClick={() => handleNavigate('/contact')}
-                  className="bg-[#fb4444] text-white py-3 px-4 rounded-full font-bold text-[14px] mt-4 hover:bg-[#ff5555] transition-colors"
+                  className="bg-[#fb4444] text-white py-3 px-4 rounded-full font-bold text-[14px] mt-4 hover:bg-[#ff5555] transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                 >
                   Get Connected
                 </button>
