@@ -1,109 +1,133 @@
 /**
  * ============================================================================
- * ATEION DESIGN SYSTEM - COMPREHENSIVE TOKENS
+ * ATEION DESIGN SYSTEM v3.0
  * ============================================================================
  * 
- * This is the single source of truth for all design decisions in the Ateion
- * website. All colors, spacing, typography, shadows, and animations must use
- * these tokens. NO hardcoded values allowed.
+ * Professional-grade design system based on:
+ * - Material Design 3 (Google)
+ * - Tailwind CSS spacing scale
+ * - Shopify Polaris design tokens
+ * - Atlassian Design System
  * 
- * Version: 2.0.0
+ * Principles:
+ * - 4px base grid system (industry standard)
+ * - Even numbers only for consistency
+ * - 1.25 Major Third typography scale
+ * - WCAG 2.1 AA accessibility compliance
+ * - Mobile-first responsive approach
+ * 
  * Last Updated: 2026
- * Maintained by: Ateion Development Team
+ * Version: 3.0.0
  * ============================================================================
  */
 
 :root {
   /* ──────────────────────────────────────────────────────────────────────────
-     COLOR PALETTE
-     ────────────────────────────────────────────────────────────────────────── */
+   * COLOR PALETTE
+   * Based on Material Design 3 & Shopify Polaris
+   * ────────────────────────────────────────────────────────────────────────── */
   
-  /* Primary Brand Colors */
-  --color-primary-red: #fb4444;
-  --color-primary-red-hover: #ff5555;
-  --color-primary-red-light: rgba(251, 68, 68, 0.1);
-  --color-primary-red-dark: #e03e3e;
+  /* Primary Brand - Red (Ateion Brand Color) */
+  --color-primary: #fb4444;
+  --color-primary-hover: #ff5555;
+  --color-primary_active: #e03e3e;
+  --color-primary_light: rgba(251, 68, 68, 0.08);
+  --color-primary_lighter: rgba(251, 68, 68, 0.04);
   
-  /* Neutral Grays (Cool grays for modern feel) */
-  --color-gray-0: #ffffff;
-  --color-gray-25: #fafafa;
-  --color-gray-50: #f5f5f5;
-  --color-gray-100: #e5e5e5;
-  --color-gray-200: #d4d4d4;
-  --color-gray-300: #a3a3a3;
-  --color-gray-400: #737373;
-  --color-gray-500: #525252;
-  --color-gray-600: #404040;
-  --color-gray-700: #262626;
-  --color-gray-800: #171717;
-  --color-gray-900: #0a0a0a;
+  /* Neutral Grays - Cool Gray Scale (Tailwind-inspired) */
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-black: #0a0a0a;
   
   /* Brand Backgrounds */
-  --color-bg-primary: #f7f3eb;        /* Warm off-white - MAIN SITE BG */
-  --color-bg-secondary: #ffffff;      /* White - Cards, surfaces */
-  --color-bg-tertiary: #faf9f7;       /* Light warm - Alternate sections */
-  --color-bg-dark: #1e1632;           /* Deep navy - Footer */
-  --color-bg-black: #202020;          /* Black cards */
-  --color-bg-nav-button: rgba(235, 235, 235, 0.8);
-  --color-bg-nav-button-hover: rgba(215, 215, 215, 0.95);
+  --color-background-primary: #f7f3eb;    /* Warm off-white - Main site BG */
+  --color-background-secondary: #ffffff;   /* White - Cards, surfaces */
+  --color-background-tertiary: #faf9f7;    /* Light warm - Sections */
+  --color-background-dark: #1e1632;        /* Deep navy - Footer */
+  --color-background-black: #202020;       /* Black cards */
+  
+  /* Navigation */
+  --color-nav-button: rgba(235, 235, 235, 0.8);
+  --color-nav-button-hover: rgba(215, 215, 215, 0.95);
+  --color-nav-button-active: rgba(200, 200, 200, 0.85);
   
   /* Text Colors */
   --color-text-primary: #1a1a1a;      /* Headings, primary text */
-  --color-text-secondary: #292929;    /* Body text, nav buttons */
+  --color-text-secondary: #292929;    /* Body text */
   --color-text-tertiary: #525252;     /* Muted text */
-  --color-text-muted: rgba(0, 0, 0, 0.6);
-  --color-text-subtle: rgba(0, 0, 0, 0.4);
+  --color-text-muted: rgba(0, 0, 0, 0.60);
+  --color-text-subtle: rgba(0, 0, 0, 0.40);
   --color-text-inverse: #ffffff;
   --color-text-link: #fb4444;
+  --color-text-link-hover: #ff5555;
   
   /* Border Colors */
   --color-border-light: rgba(0, 0, 0, 0.08);
-  --color-border-medium: rgba(0, 0, 0, 0.15);
-  --color-border-dark: rgba(0, 0, 0, 0.3);
-  --color-border-input: rgba(0, 0, 0, 0.2);
+  --color-border-medium: rgba(0, 0, 0, 0.12);
+  --color-border-dark: rgba(0, 0, 0, 0.20);
+  --color-border-input: rgba(0, 0, 0, 0.15);
+  --color-border-focus: rgba(251, 68, 68, 0.50);
   
-  /* Semantic Colors */
-  --color-success: #22c55e;
-  --color-success-light: #dcfce7;
-  --color-warning: #f59e0b;
-  --color-warning-light: #fef3c7;
-  --color-error: #ef4444;
-  --color-error-light: #fee2e2;
-  --color-info: #3b82f6;
-  --color-info-light: #dbeafe;
+  /* Semantic Colors (WCAG AA Compliant) */
+  --color-success: #16a34a;
+  --color-success_light: #dcfce7;
+  --color-success_dark: #15803d;
   
-  /* Special Colors */
+  --color-warning: #ca8a04;
+  --color-warning_light: #fef9c3;
+  --color-warning_dark: #a16207;
+  
+  --color-error: #dc2626;
+  --color-error_light: #fee2e2;
+  --color-error_dark: #b91c1c;
+  
+  --color-info: #2563eb;
+  --color-info_light: #dbeafe;
+  --color-info_dark: #1d4ed8;
+  
+  /* Special Brand Colors */
   --color-purple-card: #aa9dff;
-  --color-purple-card-dark: #8b7dff;
+  --color-purple-card_dark: #8b7dff;
   --color-red-card: #ff6b6b;
-  --color-red-card-dark: #ff5252;
+  --color-red-card_dark: #ff5252;
   --color-grey-card: #dadada;
-  --color-grey-card-dark: #c9c9c9;
+  --color-grey-card_dark: #c9c9c9;
   
   /* ──────────────────────────────────────────────────────────────────────────
-     TYPOGRAPHY
-     ────────────────────────────────────────────────────────────────────────── */
+   * TYPOGRAPHY
+   * Based on Material Design 3 & Atlassian (1.25 Major Third Scale)
+   * ────────────────────────────────────────────────────────────────────────── */
   
   /* Font Families */
-  --font-family-heading: 'OV Soge', sans-serif;
+  --font-family-heading: 'OV Soge', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-accent: 'Manrope', sans-serif;
+  --font-family-accent: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-family-mono: 'SF Pro Display', 'Courier New', monospace;
-  --font-family-footer: 'Lato', sans-serif;
+  --font-family-footer: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   
-  /* Font Sizes - Based on 1.25 scale (Major Third) */
-  --font-size-xs: 0.6875rem;    /* 11px */
-  --font-size-sm: 0.75rem;      /* 12px */
-  --font-size-base: 0.875rem;   /* 14px */
-  --font-size-lg: 1rem;         /* 16px */
-  --font-size-xl: 1.125rem;     /* 18px */
-  --font-size-2xl: 1.25rem;     /* 20px */
-  --font-size-3xl: 1.5rem;      /* 24px */
-  --font-size-4xl: 2rem;        /* 32px */
-  --font-size-5xl: 2.25rem;     /* 36px */
-  --font-size-6xl: 3rem;        /* 48px */
-  --font-size-7xl: 3.8125rem;   /* 61px */
-  --font-size-8xl: 4.5rem;      /* 72px */
+  /* Font Sizes - Major Third Scale (1.25 ratio) */
+  --font-size-xxs: 0.625rem;    /* 10px - Rare, small labels */
+  --font-size-xs: 0.75rem;      /* 12px - Small labels, captions */
+  --font-size-sm: 0.875rem;     /* 14px - Body text, buttons */
+  --font-size-base: 1rem;       /* 16px - Default body */
+  --font-size-lg: 1.125rem;     /* 18px - Lead paragraphs */
+  --font-size-xl: 1.25rem;      /* 20px - H6, subtitles */
+  --font-size-2xl: 1.5rem;      /* 24px - H5 */
+  --font-size-3xl: 1.875rem;    /* 30px - H4 */
+  --font-size-4xl: 2rem;        /* 32px - H3 */
+  --font-size-5xl: 2.25rem;     /* 36px - H2 mobile */
+  --font-size-6xl: 3rem;        /* 48px - Display */
+  --font-size-7xl: 3.75rem;     /* 60px - H1 mobile */
+  --font-size-8xl: 4.5rem;      /* 72px - H1 desktop */
   
   /* Font Weights */
   --font-weight-light: 300;
@@ -112,7 +136,7 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   
-  /* Line Heights */
+  /* Line Heights (Unitless for scalability) */
   --line-height-none: 1;
   --line-height-tight: 1.25;
   --line-height-snug: 1.375;
@@ -129,8 +153,10 @@
   --letter-spacing-widest: 0.1em;
   
   /* ──────────────────────────────────────────────────────────────────────────
-     SPACING SYSTEM (4px Base Grid)
-     ────────────────────────────────────────────────────────────────────────── */
+   * SPACING SYSTEM
+   * 4px Base Grid (Industry Standard - Material, Tailwind, Polaris)
+   * Even numbers only for pixel-perfect alignment
+   * ────────────────────────────────────────────────────────────────────────── */
   
   --space-0: 0;
   --space-1: 0.25rem;   /* 4px */
@@ -148,31 +174,36 @@
   --space-32: 8rem;     /* 128px */
   --space-40: 10rem;    /* 160px */
   --space-48: 12rem;    /* 192px */
+  --space-56: 14rem;    /* 224px */
+  --space-64: 16rem;    /* 256px */
   
   /* ──────────────────────────────────────────────────────────────────────────
-     SIZING
-     ────────────────────────────────────────────────────────────────────────── */
+   * SIZING
+   * Component-specific heights and widths
+   * ────────────────────────────────────────────────────────────────────────── */
   
   /* Component Heights */
-  --height-nav: 5rem;                 /* 80px - Total navbar height */
-  --height-nav-button: 2.25rem;       /* 36px - Nav pill buttons */
-  --height-nav-button-sm: 2rem;       /* 32px - Small nav buttons */
-  --height-cta: 2.25rem;              /* 36px - CTA buttons */
+  --height-nav: 5rem;                 /* 80px - Total navbar */
+  --height-nav-button: 2.25rem;       /* 36px - Nav pills */
+  --height-button-sm: 2rem;           /* 32px - Small buttons */
+  --height-button-md: 2.5rem;         /* 40px - Default buttons */
+  --height-button-lg: 3rem;           /* 48px - Large buttons */
   --height-input: 2.5rem;             /* 40px - Form inputs */
   --height-hero: 41.5625rem;          /* 665px - Hero section */
   --height-card-lg: 31.5rem;          /* 504px - Large cards */
   --height-card-md: 23.5625rem;       /* 377px - Medium cards */
-  --height-footer: 4rem;              /* 64px - Copyright bar */
+  --height-footer-bar: 4rem;          /* 64px - Copyright bar */
   
   /* Max Widths */
   --max-width-container: 80rem;       /* 1280px */
   --max-width-content: 64rem;         /* 1024px */
   --max-width-narrow: 48rem;          /* 768px */
-  --max-width-text: 45rem;            /* 720px - Optimal reading width */
+  --max-width-text: 45rem;            /* 720px - Reading width */
   
   /* ──────────────────────────────────────────────────────────────────────────
-     BORDER RADIUS
-     ────────────────────────────────────────────────────────────────────────── */
+   * BORDER RADIUS
+   * Based on Material Design 3 & Shopify Polaris
+   * ────────────────────────────────────────────────────────────────────────── */
   
   --radius-none: 0;
   --radius-sm: 0.25rem;   /* 4px */
@@ -183,26 +214,38 @@
   --radius-3xl: 1.5rem;   /* 24px */
   --radius-full: 9999px;  /* Pill shape */
   
-  /* Component Border Radius */
-  --radius-nav-button: var(--radius-full);
-  --radius-card: var(--radius-2xl);
+  /* Component Radius */
   --radius-button: var(--radius-full);
   --radius-input: var(--radius-lg);
+  --radius-card: var(--radius-2xl);
+  --radius-modal: var(--radius-2xl);
   
   /* ──────────────────────────────────────────────────────────────────────────
-     SHADOWS
-     ────────────────────────────────────────────────────────────────────────── */
+   * SHADOWS
+   * Based on Material Design 3 elevation system
+   * ────────────────────────────────────────────────────────────────────────── */
   
   --shadow-none: none;
+  
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.10),
+               0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.10),
+               0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.10),
+               0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.10),
+               0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   
-  /* Custom Shadows */
+  /* Custom Shadows (Ateion Brand) */
   --shadow-button: 0 4px 12px rgba(251, 68, 68, 0.25);
   --shadow-button-hover: 0 6px 20px rgba(251, 68, 68, 0.35);
   --shadow-card: 0 4px 20px rgba(25, 33, 61, 0.04);
@@ -211,38 +254,52 @@
   --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   
   /* ──────────────────────────────────────────────────────────────────────────
-     TRANSITIONS & ANIMATION
-     ────────────────────────────────────────────────────────────────────────── */
+   * TRANSITIONS & ANIMATION
+   * Based on Material Design motion principles
+   * ────────────────────────────────────────────────────────────────────────── */
   
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slower: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slowest: 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* Duration */
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 700ms;
   
-  /* Animation Easing */
+  /* Easing (Cubic Bezier) */
+  --ease-linear: cubic-bezier(0, 0, 1, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Transition Presets */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-base: var(--duration-normal) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-out);
+  --transition-slower: var(--duration-slower) var(--ease-in-out);
   
   /* ──────────────────────────────────────────────────────────────────────────
-     Z-INDEX SCALE
-     ────────────────────────────────────────────────────────────────────────── */
+   * Z-INDEX SCALE
+   * 100-based scale for clear layering
+   * ────────────────────────────────────────────────────────────────────────── */
   
   --z-base: 0;
   --z-dropdown: 100;
   --z-sticky: 200;
-  --z-fixed: 300;
-  --z-modal-backdrop: 400;
-  --z-modal: 500;
-  --z-popover: 600;
-  --z-tooltip: 700;
-  --z-notification: 800;
+  --z-overlay: 300;
+  --z-fixed: 400;
+  --z-modal-backdrop: 500;
+  --z-modal: 600;
+  --z-popover: 700;
+  --z-tooltip: 800;
+  --z-notification: 900;
   
   /* ──────────────────────────────────────────────────────────────────────────
-     BREAKPOINTS (Mobile-First)
-     ────────────────────────────────────────────────────────────────────────── */
+   * BREAKPOINTS (Mobile-First)
+   * Based on Tailwind CSS & Material Design
+   * ────────────────────────────────────────────────────────────────────────── */
   
   --breakpoint-sm: 640px;    /* Small tablets */
   --breakpoint-md: 768px;    /* Tablets */
@@ -251,34 +308,82 @@
   --breakpoint-2xl: 1536px;  /* Large screens */
   
   /* ──────────────────────────────────────────────────────────────────────────
-     COMPONENT SPECIFICATIONS
-     ────────────────────────────────────────────────────────────────────────── */
+   * COMPONENT SPECIFICATIONS
+   * Pixel-perfect values for all components
+   * ────────────────────────────────────────────────────────────────────────── */
   
   /* Navigation */
-  --nav-padding-x: var(--space-6);      /* 24px desktop */
-  --nav-padding-x-mobile: var(--space-4); /* 16px mobile */
-  --nav-padding-y: var(--space-5);      /* 20px */
-  --nav-gap: var(--space-4);            /* 16px between nav items */
-  --nav-gap-mobile: var(--space-3);     /* 12px mobile */
+  --nav-height: var(--height-nav);
+  --nav-padding-x: var(--space-6);         /* 24px desktop */
+  --nav-padding-x-mobile: var(--space-4);  /* 16px mobile */
+  --nav-padding-y: var(--space-5);         /* 20px */
+  --nav-button-gap: var(--space-4);        /* 16px desktop */
+  --nav-button-gap-mobile: var(--space-3); /* 12px mobile */
+  --nav-button-height: var(--height-nav-button);
+  --nav-button-padding-x: var(--space-5);  /* 20px */
+  --nav-button-font-size: var(--font-size-xs);  /* 12px mobile */
+  --nav-button-font-size-desktop: var(--font-size-sm); /* 14px desktop */
   
   /* Buttons */
-  --button-padding-x: var(--space-5);   /* 20px */
-  --button-font-size: var(--font-size-sm); /* 12px mobile */
-  --button-font-size-desktop: var(--font-size-base); /* 14px desktop */
+  --button-height-sm: var(--height-button-sm);
+  --button-height-md: var(--height-button-md);
+  --button-height-lg: var(--height-button-lg);
+  --button-padding-x: var(--space-5);
+  --button-font-size: var(--font-size-sm);
+  --button-border-radius: var(--radius-full);
   
   /* Cards */
-  --card-padding: var(--space-8);       /* 32px */
-  --card-gap: var(--space-6);           /* 24px between cards */
+  --card-padding: var(--space-8);
+  --card-border-radius: var(--radius-2xl);
+  --card-shadow: var(--shadow-card);
+  --card-shadow-hover: var(--shadow-card-hover);
   
   /* Footer */
-  --footer-padding-y: var(--space-12);  /* 48px */
-  --footer-column-gap: var(--space-16); /* 64px */
-  --footer-font-size: var(--font-size-base); /* 14px */
+  --footer-padding-y: var(--space-12);
+  --footer-column-gap: var(--space-16);
+  --footer-font-size: var(--font-size-sm);
+  --footer-bar-height: var(--height-footer-bar);
+  
+  /* Forms */
+  --input-height: var(--height-input);
+  --input-border-radius: var(--radius-lg);
+  --input-border-color: var(--color-border-input);
+  --input-focus-border-color: var(--color-primary);
+  
+  /* ──────────────────────────────────────────────────────────────────────────
+   * ACCESSIBILITY
+   * WCAG 2.1 AA Compliance
+   * ────────────────────────────────────────────────────────────────────────── */
+  
+  /* Focus Ring */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: rgba(251, 68, 68, 0.50);
+  --focus-ring: var(--focus-ring-width) solid var(--focus-ring-color);
+  --focus-ring-offset-style: var(--focus-ring-offset) solid var(--color-background-primary);
+  
+  /* Minimum Touch Target (Material Design) */
+  --min-touch-target: 44px;
+  
+  /* ──────────────────────────────────────────────────────────────────────────
+   * GRIDS & LAYOUT
+   * ────────────────────────────────────────────────────────────────────────── */
+  
+  /* Container Padding */
+  --container-padding-mobile: var(--space-4);   /* 16px */
+  --container-padding-tablet: var(--space-8);   /* 32px */
+  --container-padding-desktop: var(--space-16); /* 64px */
+  
+  /* Section Spacing */
+  --section-spacing-mobile: var(--space-12);   /* 48px */
+  --section-spacing-tablet: var(--space-16);   /* 64px */
+  --section-spacing-desktop: var(--space-20);  /* 80px */
 }
 
 /* ============================================================================
-   GLOBAL RESET & BASE STYLES
-   ============================================================================ */
+ * GLOBAL RESET & BASE STYLES
+ * Based on Modern CSS Reset & Material Design
+ * ============================================================================ */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -291,15 +396,16 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-normal);
   color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-background-primary);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -331,7 +437,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-red-hover);
+  color: var(--color-text-link-hover);
 }
 
 img {
@@ -348,13 +454,13 @@ button {
 }
 
 /* ============================================================================
-   UTILITY CLASSES
-   ============================================================================ */
+ * UTILITY CLASSES
+ * ============================================================================ */
 
 .container {
   max-width: var(--max-width-container);
   margin: 0 auto;
-  padding: 0 var(--space-6);
+  padding: 0 var(--container-padding-desktop);
 }
 
 .text-center { text-align: center; }
@@ -383,28 +489,34 @@ button {
 .gap-16 { gap: var(--space-16); }
 
 /* ============================================================================
-   RESPONSIVE TYPOGRAPHY
-   ============================================================================ */
+ * RESPONSIVE TYPOGRAPHY
+ * Mobile-first approach
+ * ============================================================================ */
 
 @media (max-width: 767px) {
   html {
     font-size: 14px;
   }
   
-  h1 { font-size: var(--font-size-6xl); }
+  h1 { font-size: var(--font-size-7xl); }
   h2 { font-size: var(--font-size-5xl); }
   h3 { font-size: var(--font-size-3xl); }
+  
+  .container {
+    padding: 0 var(--container-padding-mobile);
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .container {
-    padding: 0 var(--space-16);
+    padding: 0 var(--container-padding-tablet);
   }
 }
 
 /* ============================================================================
-   ACCESSIBILITY
-   ============================================================================ */
+ * ACCESSIBILITY
+ * WCAG 2.1 AA Compliance
+ * ============================================================================ */
 
 /* Focus styles for all interactive elements */
 button:focus-visible,
@@ -412,8 +524,8 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--color-primary-red);
-  outline-offset: 2px;
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
 }
 
 /* Reduced motion for users who prefer it */
@@ -422,5 +534,32 @@ select:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border-light: rgba(0, 0, 0, 0.30);
+    --color-border-medium: rgba(0, 0, 0, 0.50);
+    --color-border-dark: rgba(0, 0, 0, 0.80);
+  }
+}
+
+/* ============================================================================
+ * PRINT STYLES
+ * ============================================================================ */
+
+@media print {
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
   }
 }
