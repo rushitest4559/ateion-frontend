@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/app/components/ui/button";
+import { Button } from "./ui/button";
 import svgPaths from "../../imports/svg-paths";
 import logo from "../../assets/logo.png";
 
-function LogoComponent() {
+function LogoComponent({ inverted = false }: { inverted?: boolean }) {
   return (
     <div className="flex items-center justify-center">
       <img
         src={logo}
         alt="Ateion Logo"
         className="h-[40px] md:h-[60px] w-auto object-contain"
+        style={inverted ? { filter: "brightness(0) invert(1)" } : {}}
       />
     </div>
   );
@@ -140,13 +141,34 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 export default function Navbar() {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLogoWhite, setIsLogoWhite] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const darkSections = document.querySelectorAll('.dark-section');
+      let isDark = false;
+      const checkPoint = 60; // Y coordinate near the logo
+      
+      darkSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= checkPoint && rect.bottom >= checkPoint) {
+           isDark = true;
+        }
+      });
+      setIsLogoWhite(isDark);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    setTimeout(handleScroll, 100);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
         <div className="flex items-center justify-between px-[24px] w-full max-w-[1280px] mx-auto">
-          <button onClick={() => navigate('/')} aria-label="Go to homepage">
-            <LogoComponent />
+          <button onClick={() => navigate('/')} aria-label="Go to homepage" className="transition-opacity duration-300">
+            <LogoComponent inverted={isLogoWhite} />
           </button>
 
           <div className="hidden md:block">
