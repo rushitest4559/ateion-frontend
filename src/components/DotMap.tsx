@@ -161,13 +161,13 @@ export default function DotMap() {
           </motion.div>
 
           {/* Node core */}
-          <div className="relative w-2.5 h-2.5 bg-white rounded-full shadow-[0_0_20px_6px_rgba(96,165,250,0.9)] transition-transform duration-300 group-hover:scale-125" />
+          <div className="relative w-3 h-3 bg-white rounded-full shadow-[0_0_20px_6px_rgba(255,255,255,0.5)] transition-transform duration-300 group-hover:scale-125" />
 
           {/* Ripples */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="absolute w-10 h-10 border-2 border-blue-400/70 rounded-full animate-ripple" />
-            <div className="absolute w-10 h-10 border-2 border-blue-400/70 rounded-full animate-ripple animate-ripple-delay-1" />
-            <div className="absolute w-10 h-10 border-2 border-blue-400/70 rounded-full animate-ripple animate-ripple-delay-2" />
+            <div className="absolute w-12 h-12 border border-blue-500/30 rounded-full animate-ripple" />
+            <div className="absolute w-12 h-12 border border-blue-500/20 rounded-full animate-ripple animate-ripple-delay-1" />
+            <div className="absolute w-12 h-12 border border-blue-500/10 rounded-full animate-ripple animate-ripple-delay-2" />
           </div>
         </div>
       ))}

@@ -25,7 +25,7 @@ function HeroSection() {
         {images.map((url, index) => (
           <div
             key={index}
-            className="flex relative overflow-hidden w-32 h-32 rounded-lg"
+            className="flex relative overflow-hidden w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 rounded-lg"
           >
             <img
               src={url}
@@ -42,7 +42,7 @@ function HeroSection() {
           </h1>
           <p className="hero-subtitle">
             The Global Capability Olympiad is the world's first preparation-free,
-            syllabus-free, AI-<br />integrated Master Olympiad designed to measure
+            syllabus-free, AI-integrated Master Olympiad designed to measure
             thinking, not memory.
           </p>
 

@@ -216,7 +216,7 @@ function Frame65() {
 
 function HeroSliderImages() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[16px] items-start left-0 top-0 w-full">
+    <div className="absolute content-stretch flex flex-col gap-[8px] md:gap-[16px] items-start left-0 top-0 w-full overflow-hidden">
       <Frame67 />
       <Frame66 />
       <Frame65 />
@@ -324,20 +324,20 @@ function HeroSliderHeader() {
 
 function ExploreButton() {
   return (
-    <motion.div 
+    <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="bg-[#fb4444] flex items-center justify-center h-[52px] px-10 relative rounded-[154px] min-w-[190px] shrink-0 cursor-pointer shadow-lg shadow-[#fb444433] hover:bg-[#ff5a5a] transition-colors"
+      className="bg-[#fb4444] flex items-center justify-center h-[44px] sm:h-[48px] md:h-[52px] px-6 sm:px-8 md:px-10 relative rounded-[154px] min-w-[140px] sm:min-w-[160px] md:min-w-[190px] shrink-0 cursor-pointer shadow-lg shadow-[#fb444433] hover:bg-[#ff5a5a] transition-colors"
     >
-       <p className="font-bold leading-none text-[14px] text-white whitespace-nowrap" style={{ fontFamily: "'Manrope', sans-serif" }}>Explore more</p>
+       <p className="font-bold leading-none text-[12px] sm:text-[13px] md:text-[14px] text-white whitespace-nowrap" style={{ fontFamily: "'Manrope', sans-serif" }}>Explore more</p>
     </motion.div>
   );
 }
 
 function HeroTextBlock() {
   return (
-    <div className="flex flex-col items-start px-[64px] w-full">
-      <p className="leading-[normal] not-italic text-[72px] text-black w-full mb-6" style={{ fontFamily: "'OV Soge', sans-serif" }}>Reimagining Education</p>
+    <div className="flex flex-col items-start px-[16px] sm:px-[24px] md:px-[64px] w-full">
+      <p className="leading-[normal] not-italic text-[36px] sm:text-[48px] md:text-[72px] text-black w-full mb-4 md:mb-6" style={{ fontFamily: "'OV Soge', sans-serif" }}>Reimagining Education</p>
       <ExploreButton />
     </div>
   );
@@ -354,12 +354,12 @@ function HeroHeaderSection() {
 
 function PurpleCapabilityCardText() {
   return (
-    <div className="flex flex-col gap-[32px] items-start relative shrink-0 w-[249px]">
-      <p className="font-['Inter',sans-serif] leading-[1.4] text-[18px] text-black">
+    <div className="flex flex-col gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full max-w-[249px]">
+      <p className="font-['Inter',sans-serif] leading-[1.4] text-[16px] sm:text-[18px] text-black">
         Because <strong>marks</strong> measure memory.<br/>
-        <strong className="font-['IBM Plex Sans',sans-serif] italic text-[20px]">Capability</strong> <strong className="font-['IBM Plex Sans',sans-serif] italic">measures the future.</strong>
+        <strong className="font-['IBM Plex Sans',sans-serif] italic text-[18px] sm:text-[20px]">Capability</strong> <strong className="font-['IBM Plex Sans',sans-serif] italic">measures the future.</strong>
       </p>
-      <p className="font-['Inter',sans-serif] leading-[1.6] text-[14px] text-black w-[220px]">
+      <p className="font-['Inter',sans-serif] leading-[1.6] text-[13px] sm:text-[14px] text-black w-full">
         Ateion is the world's leading Capability-First Education ecosystem integrating AI literacy, innovation, and measurable readiness into modern schooling.
       </p>
     </div>
@@ -368,7 +368,7 @@ function PurpleCapabilityCardText() {
 
 function PurpleCapabilityCardInner() {
   return (
-    <div className="bg-[#f0f0f0] flex h-[504px] items-start p-[32px] relative rounded-tr-[13px] rounded-br-[13px] shrink-0 w-[249px]">
+    <div className="bg-[#f0f0f0] flex h-[400px] sm:h-[450px] md:h-[504px] items-start p-[24px] sm:p-[32px] relative rounded-tr-[13px] rounded-br-[13px] shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[249px]">
       <PurpleCapabilityCardText />
     </div>
   );
@@ -376,9 +376,9 @@ function PurpleCapabilityCardInner() {
 
 function PurpleCapabilityCardOuter() {
   return (
-    <div className="flex items-start justify-start relative shrink-0 w-full">
-      <div className="content-stretch flex items-center relative shrink-0 w-[1224px] pl-[64px]">
-        <div className="bg-[#aa9dff] h-[504px] w-[975px] rounded-bl-[13px] rounded-tl-[13px] shrink-0" />
+    <div className="flex flex-col md:flex-row items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0">
+      <div className="content-stretch flex flex-col md:flex-row items-center relative shrink-0 w-full">
+        <div className="bg-[#aa9dff] h-[350px] sm:h-[400px] md:h-[504px] w-full rounded-bl-[13px] rounded-tl-[13px] md:rounded-bl-[13px] md:rounded-tl-none shrink-0" />
         <PurpleCapabilityCardInner />
       </div>
     </div>
@@ -387,9 +387,9 @@ function PurpleCapabilityCardOuter() {
 
 function GlobalAlignedTitle() {
   return (
-    <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[260px]">
-      <p className="leading-[normal] min-w-full not-italic relative shrink-0 text-[36px] text-white w-[min-content]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Globally Aligned with</p>
-      <div className="h-[184px] relative rounded-[16px] shrink-0 w-[250px]" data-name="image 9">
+    <div className="content-stretch flex flex-col gap-[16px] sm:gap-[24px] items-start relative shrink-0 w-full max-w-[260px]">
+      <p className="leading-[normal] min-w-full not-italic relative shrink-0 text-[28px] sm:text-[36px] text-white w-[min-content]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Globally Aligned with</p>
+      <div className="h-[140px] sm:h-[184px] relative rounded-[16px] shrink-0 w-[200px] sm:w-[250px]" data-name="image 9">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgImage9} />
       </div>
     </div>
@@ -398,9 +398,9 @@ function GlobalAlignedTitle() {
 
 function GlobalAlignedContent() {
   return (
-    <div className="content-stretch flex gap-[16px] items-center relative shrink-0">
+    <div className="content-stretch flex flex-col sm:flex-row gap-[16px] sm:gap-[24px] items-start sm:items-center relative shrink-0 w-full">
       <GlobalAlignedTitle />
-      <div className="h-[312px] relative rounded-[9px] shrink-0 w-[220px]" data-name="image 7">
+      <div className="h-[200px] sm:h-[312px] relative rounded-[9px] shrink-0 w-full max-w-[220px]" data-name="image 7">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[9px] size-full" src={imgImage7} />
       </div>
     </div>
@@ -409,7 +409,7 @@ function GlobalAlignedContent() {
 
 function GlobalAlignedBlackCard() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-[376px] items-start pb-[32px] pt-[32px] px-[32px] relative rounded-[20px] shrink-0 w-[600px]">
+    <div className="bg-[#202020] content-stretch flex flex-col h-auto sm:h-[376px] items-start pb-[24px] sm:pb-[32px] pt-[24px] sm:pt-[32px] px-[24px] sm:px-[32px] relative rounded-[20px] shrink-0 w-full">
       <GlobalAlignedContent />
     </div>
   );
@@ -417,8 +417,8 @@ function GlobalAlignedBlackCard() {
 
 function RedIntelligenceTitle() {
   return (
-    <div className="h-[132px] relative shrink-0 w-[235px]">
-      <p className="absolute leading-[normal] left-0 not-italic text-[24px] text-black top-0 w-[235px]" style={{ fontFamily: "'OV Soge', sans-serif" }}>Education is not broken. Its measurement system is :</p>
+    <div className="h-auto sm:h-[132px] relative shrink-0 w-full max-w-[235px]">
+      <p className="relative leading-[normal] not-italic text-[20px] sm:text-[24px] text-black w-full" style={{ fontFamily: "'OV Soge', sans-serif" }}>Education is not broken. Its measurement system is :</p>
     </div>
   );
 }
@@ -434,11 +434,11 @@ function RedIntelligenceTop() {
 
 function RedIntelligenceContent() {
   return (
-    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-[510px]">
+    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full max-w-[510px]">
       <RedIntelligenceTop />
-      <p className="font-['Inter',sans-serif] h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
-        <span className="leading-[32px] text-[20px]">{`Ateion replaces memory-based validation with `}</span>
-        <span className="font-['IBM Plex Sans',sans-serif] italic leading-[32px] text-[36px]">Capability-based intelligence.</span>
+      <p className="font-['Inter',sans-serif] h-auto sm:h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
+        <span className="leading-[28px] sm:leading-[32px] text-[18px] sm:text-[20px]">{`Ateion replaces memory-based validation with `}</span>
+        <span className="font-['IBM Plex Sans',sans-serif] italic leading-[28px] sm:leading-[32px] text-[28px] sm:text-[36px]">Capability-based intelligence.</span>
       </p>
     </div>
   );
@@ -446,7 +446,7 @@ function RedIntelligenceContent() {
 
 function RedIntelligenceCard() {
   return (
-    <div className="bg-[#ff6b6b] content-stretch flex flex-col h-[376px] items-start pb-[8px] pl-[50px] pr-[24px] pt-[32px] relative rounded-[20px] shrink-0 w-[600px]">
+    <div className="bg-[#ff6b6b] content-stretch flex flex-col h-auto sm:h-[376px] items-start pb-[8px] pl-[24px] sm:pl-[50px] pr-[16px] sm:pr-[24px] pt-[24px] sm:pt-[32px] relative rounded-[20px] shrink-0 w-full">
       <RedIntelligenceContent />
     </div>
   );
@@ -454,8 +454,8 @@ function RedIntelligenceCard() {
 
 function HeroMetricsRow() {
   return (
-    <div className="flex items-start justify-start relative shrink-0 w-full">
-      <div className="flex gap-[24px] items-center relative shrink-0 w-[1224px] pl-[64px]">
+    <div className="flex flex-col md:flex-row items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0 gap-[16px] sm:gap-[24px] md:gap-0">
+      <div className="flex flex-col md:flex-row gap-[16px] sm:gap-[24px] items-center relative shrink-0 w-full">
         <GlobalAlignedBlackCard />
         <RedIntelligenceCard />
       </div>
@@ -486,12 +486,12 @@ function CounterPartnerInstitutions() {
   return (
     <motion.div
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="content-stretch flex flex-col items-center justify-center relative shrink-0"
+      className="content-stretch flex flex-col items-center justify-center relative shrink-0 px-4"
     >
-      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[42px] sm:text-[48px] md:text-[54px]">
         <Counter value={200} suffix="+" />
       </p>
-      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Partner Institutions</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[16px] sm:text-[18px] mt-[8px] sm:mt-[12px] text-center">Partner Institutions</p>
     </motion.div>
   );
 }
@@ -500,12 +500,12 @@ function CounterStudentsEmpowered() {
   return (
     <motion.div
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="content-stretch flex flex-col items-center justify-center relative shrink-0"
+      className="content-stretch flex flex-col items-center justify-center relative shrink-0 px-4"
     >
-      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[42px] sm:text-[48px] md:text-[54px]">
         <Counter value={50000} suffix="+" />
       </p>
-      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Students Empowered</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[16px] sm:text-[18px] mt-[8px] sm:mt-[12px] text-center">Students Empowered</p>
     </motion.div>
   );
 }
@@ -514,12 +514,12 @@ function CounterGlobalAlliances() {
   return (
     <motion.div
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="content-stretch flex flex-col items-center justify-center relative shrink-0"
+      className="content-stretch flex flex-col items-center justify-center relative shrink-0 px-4"
     >
-      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[42px] sm:text-[48px] md:text-[54px]">
         <Counter value={193} suffix="+" />
       </p>
-      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Global Alliances</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[16px] sm:text-[18px] mt-[8px] sm:mt-[12px] text-center">Global Alliances</p>
     </motion.div>
   );
 }
@@ -576,8 +576,8 @@ function GlobalPresenceMapPadding() {
 
 function GlobalPresenceMapBg() {
   return (
-    <div className="bg-black h-auto relative shrink-0 w-full py-[80px] dark-section">
-      <div className="content-stretch flex flex-col items-center relative size-full">
+    <div className="bg-black h-auto relative shrink-0 w-full py-[48px] sm:py-[64px] md:py-[80px] dark-section">
+      <div className="content-stretch flex flex-col items-center relative size-full px-4">
         <GlobalPresenceMapPadding />
       </div>
     </div>
@@ -586,8 +586,8 @@ function GlobalPresenceMapBg() {
 
 function GlobalPresenceMainHeading() {
   return (
-    <div className="w-full flex justify-center mb-10">
-      <p className="font-semibold leading-tight text-[48px] text-black text-center" style={{ fontFamily: "'OV Soge', sans-serif" }}>Global Presence</p>
+    <div className="w-full flex justify-center mb-6 sm:mb-8 md:mb-10 px-4">
+      <p className="font-semibold leading-tight text-[36px] sm:text-[42px] md:text-[48px] text-black text-center" style={{ fontFamily: "'OV Soge', sans-serif" }}>Global Presence</p>
     </div>
   );
 }
@@ -612,8 +612,8 @@ function HeroAndMapRow() {
 
 function HeroMetricsAndMap() {
   return (
-    <div className="flex flex-col gap-[60px] items-center w-full">
-      <div className="w-full px-[64px]">
+    <div className="flex flex-col gap-[40px] sm:gap-[60px] items-center w-full">
+      <div className="w-full px-[16px] sm:px-[24px] md:px-[64px]">
         <HeroFeatureCardsRow />
       </div>
       <GlobalPresenceMapSection />
@@ -623,11 +623,11 @@ function HeroMetricsAndMap() {
 
 function EducationStatusHeader() {
   return (
-    <div className="content-stretch flex items-center justify-between not-italic relative shrink-0 text-black w-full py-[48px] gap-[64px]">
-      <p className="leading-tight relative shrink-0 text-[48px] flex-1" style={{ fontFamily: "'OV Soge', sans-serif" }}>
+    <div className="content-stretch flex flex-col sm:flex-row items-start sm:items-center justify-between not-italic relative shrink-0 text-black w-full py-[24px] sm:py-[48px] gap-[24px] sm:gap-[64px]">
+      <p className="leading-tight relative shrink-0 text-[28px] sm:text-[36px] md:text-[48px] flex-1" style={{ fontFamily: "'OV Soge', sans-serif" }}>
         Education is not broken.
       </p>
-      <p className="font-['Inter',sans-serif] leading-relaxed relative shrink-0 text-[18px] text-[rgba(0,0,0,0.7)] flex-1">
+      <p className="font-['Inter',sans-serif] leading-relaxed relative shrink-0 text-[16px] sm:text-[18px] text-[rgba(0,0,0,0.7)] flex-1">
         <span>{`Its measurement system is `}</span>
         <span className="font-bold">outdated.</span>
         <span>{` Ateion replaces memory-based validation with `}</span>
@@ -639,20 +639,20 @@ function EducationStatusHeader() {
 
 function EducationStatusRowTop() {
   return (
-    <div className="content-stretch flex gap-[20px] items-center relative shrink-0 w-full">
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
+    <div className="content-stretch flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center relative shrink-0 w-full">
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
     </div>
   );
 }
 
 function EducationStatusRowBottom() {
   return (
-    <div className="content-stretch flex gap-[20px] items-center relative shrink-0 w-full">
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
-      <div className="bg-[#d9d9d9] h-[335px] shrink-0 flex-1" />
+    <div className="content-stretch flex flex-col sm:flex-row gap-[12px] sm:gap-[20px] items-center relative shrink-0 w-full">
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
+      <div className="bg-[#d9d9d9] h-[200px] sm:h-[280px] md:h-[335px] shrink-0 flex-1" />
     </div>
   );
 }
@@ -668,9 +668,9 @@ function EducationStatusGrid() {
 
 function EducationStatusWrapper() {
   return (
-    <div className="w-full px-[64px]">
+    <div className="w-full px-[16px] sm:px-[24px] md:px-[64px]">
       <FadeIn>
-        <div className="flex flex-col gap-[24px] items-start w-full">
+        <div className="flex flex-col gap-[16px] sm:gap-[24px] items-start w-full">
           <EducationStatusHeader />
           <EducationStatusGrid />
         </div>
@@ -986,8 +986,8 @@ function EcosystemCluster() {
 
 function FAQSectionTitle() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0">
-      <p className="col-1 leading-[1.19] ml-0 mt-0 not-italic relative row-1 text-[32px] text-black text-center whitespace-nowrap" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>Your Common Questions Answered</p>
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0 px-4">
+      <p className="col-1 leading-[1.19] ml-0 mt-0 not-italic relative row-1 text-[24px] sm:text-[28px] md:text-[32px] text-black text-center whitespace-nowrap" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>Your Common Questions Answered</p>
     </div>
   );
 }
@@ -1026,13 +1026,13 @@ function FAQItem({ question, answer, isOpen, toggle }: { question: string, answe
     >
       <button
         onClick={toggle}
-        className="w-full content-stretch flex items-center justify-between px-[32px] py-[28px] relative text-left group"
+        className="w-full content-stretch flex items-center justify-between px-[20px] sm:px-[32px] py-[20px] sm:py-[28px] relative text-left group"
       >
-        <p className="flex-[1_0_0] font-semibold leading-[1.35] max-w-[700px] not-italic relative text-[#1a1a1a] text-[22px] transition-colors group-hover:text-[#fb4444]" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>
+        <p className="flex-[1_0_0] font-semibold leading-[1.35] max-w-[700px] not-italic relative text-[#1a1a1a] text-[18px] sm:text-[20px] md:text-[22px] transition-colors group-hover:text-[#fb4444]" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>
           {question}
         </p>
-        <div className={`bg-[#e7e3dd] content-stretch flex items-center p-[8px] relative rounded-[100px] shadow-[0px_1px_2px_0px_rgba(25,33,61,0.07)] shrink-0 transition-transform duration-500 ${isOpen ? 'rotate-90' : ''}`}>
-          <div className="overflow-clip relative shrink-0 size-[20px]">
+        <div className={`bg-[#e7e3dd] content-stretch flex items-center p-[6px] sm:p-[8px] relative rounded-[100px] shadow-[0px_1px_2px_0px_rgba(25,33,61,0.07)] shrink-0 transition-transform duration-500 ${isOpen ? 'rotate-90' : ''}`}>
+          <div className="overflow-clip relative shrink-0 size-[18px] sm:size-[20px]">
             <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[12px] items-center justify-center left-[calc(50%+1px)] top-1/2 w-[6px]">
               <div className="-scale-y-100 flex-none">
                 <div className="h-[12px] relative w-[6px]">
@@ -1056,8 +1056,8 @@ function FAQItem({ question, answer, isOpen, toggle }: { question: string, answe
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
           >
-            <div className="px-[32px] pb-[32px] pt-[8px]">
-              <p className="leading-relaxed text-[16px] text-[rgba(0,0,0,0.7)] max-w-[750px]" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>
+            <div className="px-[20px] sm:px-[32px] pb-[20px] sm:pb-[32px] pt-[8px]">
+              <p className="leading-relaxed text-[15px] sm:text-[16px] text-[rgba(0,0,0,0.7)] max-w-[750px]" style={{ fontFamily: "'SF Pro Display', sans-serif" }}>
                 {answer}
               </p>
             </div>
@@ -1105,14 +1105,14 @@ function FAQSectionInner() {
 
 function EcosystemSection() {
   return (
-    <div className="flex flex-col items-center w-full py-[120px] overflow-hidden bg-[#f7f3eb]">
-      <p className="font-['Outfit',sans-serif] text-[58px] text-black text-center w-full mb-[100px] tracking-tight">
+    <div className="flex flex-col items-center w-full py-[60px] sm:py-[80px] md:py-[120px] overflow-hidden bg-[#f7f3eb] px-4">
+      <p className="font-['Outfit',sans-serif] text-[36px] sm:text-[48px] md:text-[58px] text-black text-center w-full mb-[40px] sm:mb-[60px] md:mb-[100px] tracking-tight px-4">
         <span className="leading-[1.2]">Ateion as an </span>
         <span className="font-['IBM Plex Sans',sans-serif] italic">Ecosystem</span>
       </p>
-      
-      {/* Unified Whole Entity: Shifted left by -100px to satisfy the visual centering request and address the "extra space" on the left */}
-      <div className="w-full flex flex-row items-center justify-center gap-[60px] scale-[0.88] origin-center translate-x-[-100px]">
+
+      {/* Unified Whole Entity: Responsive layout for mobile and desktop */}
+      <div className="w-full flex flex-col md:flex-row items-center justify-center gap-[40px] sm:gap-[60px] scale-[0.85] sm:scale-[0.88] origin-center">
         <GcoFeatureBadge />
         <EcosystemCluster />
       </div>
@@ -1122,7 +1122,7 @@ function EcosystemSection() {
 
 function FAQSectionContainer() {
   return (
-    <div className="flex flex-col items-center w-full px-[64px] py-[40px] mb-[60px]">
+    <div className="flex flex-col items-center w-full px-[16px] sm:px-[24px] md:px-[64px] py-[40px] sm:py-[60px] mb-[40px] sm:mb-[60px]">
       <FAQSectionInner />
     </div>
   );
