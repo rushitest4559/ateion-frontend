@@ -355,16 +355,16 @@ function HeroHeaderSection() {
 function PurpleCapabilityCardText() {
   return (
     <div className="content-stretch flex flex-col gap-[133px] items-start not-italic relative shrink-0 text-black w-[232px]">
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-[0] min-w-full relative shrink-0 text-[0px] w-[min-content]">
+      <p className="font-['Inter',sans-serif] leading-[0] min-w-full relative shrink-0 text-[0px] w-[min-content]">
         <span className="leading-[normal] text-[24px]">{`Because `}</span>
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[24px]">{`marks `}</span>
+        <span className="font-['Inter',sans-serif] leading-[normal] text-[24px]">{`marks `}</span>
         <span className="leading-[normal] text-[24px]">measure memory.</span>
-        <span className="font-['IBM_Plex_Sans:SemiBold_Italic',sans-serif] italic leading-[normal] text-[24px]">{` `}</span>
-        <span className="font-['SF_Pro_Display:Bold',sans-serif] leading-[normal] text-[32px]">Capability</span>
+        <span className="font-['IBM Plex Sans',sans-serif] italic leading-[normal] text-[24px]">{` `}</span>
+        <span className="font-['Inter',sans-serif] leading-[normal] text-[32px]">Capability</span>
         <span className="leading-[normal] text-[24px]">{` `}</span>
-        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[normal] text-[24px]">measures the future.</span>
+        <span className="font-['IBM Plex Sans',sans-serif] italic leading-[normal] text-[24px]">measures the future.</span>
       </p>
-      <p className="font-['SF_Pro_Display:Regular',sans-serif] leading-[normal] relative shrink-0 text-[20px] w-[190px] whitespace-pre-wrap">{`Ateion is the world's leading Capability-First Education ecosystem  integrating AI literacy, innovation, and measurable readiness into modern schooling.`}</p>
+      <p className="font-['Inter',sans-serif] leading-[normal] relative shrink-0 text-[20px] w-[190px] whitespace-pre-wrap">{`Ateion is the world's leading Capability-First Education ecosystem  integrating AI literacy, innovation, and measurable readiness into modern schooling.`}</p>
     </div>
   );
 }
@@ -439,9 +439,9 @@ function RedIntelligenceContent() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-[510px]">
       <RedIntelligenceTop />
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
+      <p className="font-['Inter',sans-serif] h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
         <span className="leading-[32px] text-[20px]">{`Ateion replaces memory-based validation with `}</span>
-        <span className="font-['IBM_Plex_Sans:Bold_Italic',sans-serif] italic leading-[32px] text-[36px]">Capability-based intelligence.</span>
+        <span className="font-['IBM Plex Sans',sans-serif] italic leading-[32px] text-[36px]">Capability-based intelligence.</span>
       </p>
     </div>
   );
@@ -491,10 +491,10 @@ function CounterPartnerInstitutions() {
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
       className="content-stretch flex flex-col items-center justify-center relative shrink-0"
     >
-      <p className="font-['DM_Sans:Bold',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
         <Counter value={200} suffix="+" />
       </p>
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Partner Institutions</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Partner Institutions</p>
     </motion.div>
   );
 }
@@ -505,10 +505,10 @@ function CounterStudentsEmpowered() {
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
       className="content-stretch flex flex-col items-center justify-center relative shrink-0"
     >
-      <p className="font-['DM_Sans:Bold',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
         <Counter value={50000} suffix="+" />
       </p>
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Students Empowered</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Students Empowered</p>
     </motion.div>
   );
 }
@@ -519,10 +519,10 @@ function CounterGlobalAlliances() {
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
       className="content-stretch flex flex-col items-center justify-center relative shrink-0"
     >
-      <p className="font-['DM_Sans:Bold',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
+      <p className="font-['DM Sans',sans-serif] font-bold leading-none relative shrink-0 text-[#f3ecff] text-[54px]">
         <Counter value={193} suffix="+" />
       </p>
-      <p className="font-['SF_Pro_Display:Medium',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Global Alliances</p>
+      <p className="font-['Inter',sans-serif] leading-normal not-italic relative shrink-0 text-[#a78bfa] text-[18px] mt-[12px]">Global Alliances</p>
     </motion.div>
   );
 }
@@ -630,7 +630,7 @@ function EducationStatusHeader() {
       <p className="leading-tight relative shrink-0 text-[48px] flex-1" style={{ fontFamily: "'OV Soge', sans-serif" }}>
         Education is not broken.
       </p>
-      <p className="font-['Inter:Regular',sans-serif] leading-relaxed relative shrink-0 text-[18px] text-[rgba(0,0,0,0.7)] flex-1">
+      <p className="font-['Inter',sans-serif] leading-relaxed relative shrink-0 text-[18px] text-[rgba(0,0,0,0.7)] flex-1">
         <span>{`Its measurement system is `}</span>
         <span className="font-bold">outdated.</span>
         <span>{` Ateion replaces memory-based validation with `}</span>
@@ -694,7 +694,7 @@ function HeroAndEducationRow() {
 function Tag({ text, className = "" }: { text: string, className?: string }) {
   return (
     <div className={`border-[#272424] border-[0.6px] border-solid rounded-full px-4 py-1.5 h-[30px] flex items-center justify-center bg-transparent ${className}`}>
-      <p className="font-['DM_Sans:Regular',sans-serif] font-normal leading-none text-[#272424] text-[13px] text-center pt-[1px]" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <p className="font-['DM Sans',sans-serif] font-normal leading-none text-[#272424] text-[13px] text-center pt-[1px]" style={{ fontVariationSettings: "'opsz' 14" }}>
         {text}
       </p>
     </div>
@@ -749,7 +749,7 @@ function GcoFeatureTitleContainer() {
 function GcoFeatureNumber() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['DM_Sans:Light',sans-serif] font-light leading-[2] relative shrink-0 text-[24px] text-black w-full opacity-60 mb-2" style={{ fontVariationSettings: "'opsz' 14" }}>
+      <p className="font-['DM Sans',sans-serif] font-light leading-[2] relative shrink-0 text-[24px] text-black w-full opacity-60 mb-2" style={{ fontVariationSettings: "'opsz' 14" }}>
         (01)
       </p>
       <GcoFeatureTitleContainer />
@@ -762,7 +762,7 @@ function GcoFeatureBadge() {
     <div className="col-1 content-stretch flex flex-col gap-[32px] items-start ml-0 mt-0 relative row-1 w-[392px]">
       <GcoFeatureNumber />
       <div className="flex items-center justify-between bg-[#161616] h-[54px] pl-7 pr-6 rounded-full w-[174px] cursor-pointer group hover:bg-[#222] transition-colors" data-name="view more">
-        <p className="font-['Outfit:Medium',sans-serif] leading-none text-[17px] text-white tracking-[0.16px] whitespace-nowrap pt-0.5">View More</p>
+        <p className="font-['Outfit',sans-serif] leading-none text-[17px] text-white tracking-[0.16px] whitespace-nowrap pt-0.5">View More</p>
         <div className="flex items-center justify-center">
           <div className="flex items-center justify-center h-[26px] w-[26px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -785,7 +785,7 @@ function EcosystemBubble({
   description,
   isDark = false,
   titleSize = "18px",
-  titleClass = "font-['Outfit:Bold',sans-serif]",
+  titleClass = "font-['Outfit',sans-serif]",
   gradientId,
   descSize = "12px",
   staticTextColor
@@ -870,7 +870,7 @@ function EcosystemBubble({
         </motion.p>
         
         <motion.p 
-          className="font-['Inter:Regular',sans-serif] leading-snug not-italic"
+          className="font-['Inter',sans-serif] leading-snug not-italic"
           style={{ 
             fontSize: descSize,
             maxWidth: "80%",
@@ -947,7 +947,7 @@ function EcosystemCluster() {
         title="Ateion" 
         description="Ateion is building the infrastructure for a capability-based future by integrating early AI workshops with standard-setting competitions."
         titleSize="24px"
-        titleClass="font-['Outfit:Semi_Bold',sans-serif]"
+        titleClass="font-['Outfit',sans-serif]"
       />
       
       <EcosystemBubble 
@@ -1109,9 +1109,9 @@ function FAQSectionInner() {
 function EcosystemSection() {
   return (
     <div className="flex flex-col items-center w-full py-[120px] overflow-hidden bg-[#f7f3eb]">
-      <p className="font-['Outfit:Semi_Bold',sans-serif] text-[58px] text-black text-center w-full mb-[100px] tracking-tight">
+      <p className="font-['Outfit',sans-serif] text-[58px] text-black text-center w-full mb-[100px] tracking-tight">
         <span className="leading-[1.2]">Ateion as an </span>
-        <span className="font-['IBM_Plex_Sans:SemiBold_Italic',sans-serif] italic">Ecosystem</span>
+        <span className="font-['IBM Plex Sans',sans-serif] italic">Ecosystem</span>
       </p>
       
       {/* Unified Whole Entity: Shifted left by -100px to satisfy the visual centering request and address the "extra space" on the left */}
@@ -1144,7 +1144,7 @@ function MainContentWrapper() {
 function FooterBrandName() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0">
-      <p className="font-['Lato:Bold',sans-serif] font-bold leading-tight not-italic relative shrink-0 text-[18px] text-black">Ateion Pvt. Ltd.</p>
+      <p className="font-['Lato',sans-serif] font-bold leading-tight not-italic relative shrink-0 text-[18px] text-black">Ateion Pvt. Ltd.</p>
     </div>
   );
 }
@@ -1201,7 +1201,7 @@ function FooterColumnLeft() {
 function FooterAddress() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-      <p className="font-['Lato:Regular',sans-serif] h-[68px] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] w-[260px] whitespace-pre-wrap">{`PCMC , Pune , Maharashtra  - 500034`}</p>
+      <p className="font-['Lato',sans-serif] h-[68px] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] w-[260px] whitespace-pre-wrap">{`PCMC , Pune , Maharashtra  - 500034`}</p>
     </div>
   );
 }
@@ -1209,7 +1209,7 @@ function FooterAddress() {
 function FooterPhone() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0">
-      <p className="font-['Lato:Regular',sans-serif] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] whitespace-nowrap">+91 93569 76878</p>
+      <p className="font-['Lato',sans-serif] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] whitespace-nowrap">+91 93569 76878</p>
     </div>
   );
 }
@@ -1217,7 +1217,7 @@ function FooterPhone() {
 function FooterEmail() {
   return (
     <div className="content-stretch flex flex-col items-start justify-center relative shrink-0">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] whitespace-nowrap">destiny@ateion.com</p>
+      <p className="font-['Inter',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] whitespace-nowrap">destiny@ateion.com</p>
     </div>
   );
 }
@@ -1242,7 +1242,7 @@ function FooterColumnMiddle() {
 
 function FooterLegalLinks() {
   return (
-    <div className="content-stretch flex flex-col font-['Lato:Regular',sans-serif] gap-[16px] items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] w-full">
+    <div className="content-stretch flex flex-col font-['Lato',sans-serif] gap-[16px] items-start leading-[normal] not-italic relative shrink-0 text-[14px] text-[rgba(0,0,0,0.6)] w-full">
       <p className="relative shrink-0 w-full">Terms of Use</p>
       <p className="relative shrink-0 w-full">Privacy Policy</p>
       <p className="relative shrink-0 w-full">{`Data Collection & Consent`}</p>
@@ -1282,7 +1282,7 @@ function FooterCopyrightBar() {
   return (
     <div className="bg-[#1e1632] h-[64px] relative shrink-0 w-full flex items-center justify-center px-[32px]">
       <div aria-hidden="true" className="absolute border-[#e4e4e4] border-solid border-t-[1px] inset-[0_0_auto_0] pointer-events-none opacity-20" />
-      <p className="font-['Lato:Regular',sans-serif] leading-normal not-italic relative shrink-0 text-[14px] text-center text-white opacity-80">
+      <p className="font-['Lato',sans-serif] leading-normal not-italic relative shrink-0 text-[14px] text-center text-white opacity-80">
         Copyright ©Ateion 2026. All Rights Reserved.
       </p>
     </div>
