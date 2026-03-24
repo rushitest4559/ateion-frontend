@@ -6,7 +6,7 @@
  * ============================================================================
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router";
 import svgPaths from "../../imports/svg-paths";
@@ -15,12 +15,49 @@ import logo from "../../assets/logo.png";
 const navTextClass = "font-bold text-[13px] whitespace-nowrap font-manrope";
 
 function LogoContainer() {
+  const [isLogoWhite, setIsLogoWhite] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('nav');
+      if (!navbar) return;
+      
+      const navRect = navbar.getBoundingClientRect();
+      const darkSections = document.querySelectorAll('.dark-section');
+      
+      let overDark = false;
+      // Also check standard dark themes like the NextThemes data-theme
+      const isDarkTheme = document.documentElement.getAttribute('data-theme') === 'dark';
+      
+      darkSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        // Check if navbar's mid-height is within the dark section's vertical bounds
+        const navMidY = navRect.top + navRect.height / 2;
+        if (navMidY >= rect.top && navMidY <= rect.bottom) {
+          overDark = true;
+        }
+      });
+      
+      setIsLogoWhite(overDark || isDarkTheme);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+    setTimeout(handleScroll, 100); // Trigger after slight delay to ensure layout shifts are resolved
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="flex items-center relative shrink-0">
       <img
         src={logo}
         alt="Ateion Logo"
-        className="h-[50px] md:h-[60px] object-contain w-auto"
+        className={`h-[50px] md:h-[60px] object-contain w-auto transition-all duration-300 ${isLogoWhite ? 'brightness-0 invert' : ''}`}
       />
     </div>
   );

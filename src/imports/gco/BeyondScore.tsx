@@ -18,7 +18,7 @@ export default function BeyondScoreClone() {
   ];
 
   return (
-    <div style={{ backgroundColor: "#000", fontFamily: "'Manrope', sans-serif", minHeight: "100vh", color: "#fff", overflowX: "hidden" }}>
+    <div className="dark-section" style={{ backgroundColor: "#000", fontFamily: "'Manrope', sans-serif", minHeight: "100vh", color: "#fff", overflowX: "hidden" }}>
 
       {/* --- HERO SECTION --- */}
       <section style={{

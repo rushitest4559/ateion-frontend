@@ -345,7 +345,7 @@ function HeroTextBlock() {
 
 function HeroHeaderSection() {
   return (
-    <div className="flex flex-col items-start w-full gap-[40px]">
+    <div className="flex flex-col items-start w-full gap-[80px] lg:gap-[200px]">
       <HeroSliderHeader />
       <HeroTextBlock />
     </div>
@@ -354,7 +354,7 @@ function HeroHeaderSection() {
 
 function PurpleCapabilityCardText() {
   return (
-    <div className="flex flex-col gap-[24px] sm:gap-[32px] items-start relative shrink-0 w-full max-w-[249px]">
+    <div className="flex flex-col gap-[24px] sm:gap-[32px] items-start justify-center relative shrink-0 w-full md:max-w-[300px]">
       <p className="font-['Inter',sans-serif] leading-[1.4] text-[16px] sm:text-[18px] text-black">
         Because <strong>marks</strong> measure memory.<br />
         <strong className="font-['IBM Plex Sans',sans-serif] italic text-[18px] sm:text-[20px]">Capability</strong> <strong className="font-['IBM Plex Sans',sans-serif] italic">measures the future.</strong>
@@ -368,7 +368,7 @@ function PurpleCapabilityCardText() {
 
 function PurpleCapabilityCardInner() {
   return (
-    <div className="bg-[#f0f0f0] flex h-[400px] sm:h-[450px] md:h-[504px] items-start p-[24px] sm:p-[32px] relative rounded-tr-[13px] rounded-br-[13px] shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[249px]">
+    <div className="bg-[#e6e6e6] flex h-[400px] sm:h-[450px] md:h-[504px] items-start p-[24px] sm:p-[32px] md:p-[40px] relative rounded-[13px] sm:rounded-[20px] shrink-0 w-full md:w-[32%] lg:w-[28%] md:max-w-none">
       <PurpleCapabilityCardText />
     </div>
   );
@@ -376,9 +376,9 @@ function PurpleCapabilityCardInner() {
 
 function PurpleCapabilityCardOuter() {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0">
-      <div className="content-stretch flex flex-col md:flex-row items-center relative shrink-0 w-full">
-        <div className="bg-[#aa9dff] h-[350px] sm:h-[400px] md:h-[504px] w-full rounded-bl-[13px] rounded-tl-[13px] md:rounded-bl-[13px] md:rounded-tl-none shrink-0" />
+    <div className="flex flex-col items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0">
+      <div className="content-stretch flex flex-col md:flex-row items-stretch relative shrink-0 w-full gap-[16px] sm:gap-[24px]">
+        <div className="bg-[#aa9dff] h-[350px] sm:h-[400px] md:h-auto flex-1 w-full rounded-[13px] sm:rounded-[20px] shrink-0 md:shrink" />
         <PurpleCapabilityCardInner />
       </div>
     </div>
@@ -409,7 +409,7 @@ function GlobalAlignedContent() {
 
 function GlobalAlignedBlackCard() {
   return (
-    <div className="bg-[#202020] content-stretch flex flex-col h-auto sm:h-[376px] items-start pb-[24px] sm:pb-[32px] pt-[24px] sm:pt-[32px] px-[24px] sm:px-[32px] relative rounded-[20px] shrink-0 w-full">
+    <div className="bg-[#202020] content-stretch flex flex-col items-start pb-[24px] sm:pb-[32px] pt-[24px] sm:pt-[32px] px-[24px] sm:px-[32px] relative rounded-[13px] sm:rounded-[20px] shrink-0 md:shrink w-full md:w-[45%] lg:w-[40%]">
       <GlobalAlignedContent />
     </div>
   );
@@ -425,7 +425,7 @@ function RedIntelligenceTitle() {
 
 function RedIntelligenceTop() {
   return (
-    <div className="content-stretch flex items-start relative shrink-0">
+    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full">
       <RedIntelligenceTitle />
       <VerticalTicker />
     </div>
@@ -436,7 +436,7 @@ function RedIntelligenceContent() {
   return (
     <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full max-w-[510px]">
       <RedIntelligenceTop />
-      <p className="font-['Inter',sans-serif] h-auto sm:h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full">
+      <p className="font-['Inter',sans-serif] h-auto sm:h-[88px] leading-[0] not-italic relative shrink-0 text-[0px] text-black w-full flex-1 mt-4 sm:mt-0">
         <span className="leading-[28px] sm:leading-[32px] text-[18px] sm:text-[20px]">{`Ateion replaces memory-based validation with `}</span>
         <span className="font-['IBM Plex Sans',sans-serif] italic leading-[28px] sm:leading-[32px] text-[28px] sm:text-[36px]">Capability-based intelligence.</span>
       </p>
@@ -446,7 +446,7 @@ function RedIntelligenceContent() {
 
 function RedIntelligenceCard() {
   return (
-    <div className="bg-[#ff6b6b] content-stretch flex flex-col h-auto sm:h-[376px] items-start pb-[8px] pl-[24px] sm:pl-[50px] pr-[16px] sm:pr-[24px] pt-[24px] sm:pt-[32px] relative rounded-[20px] shrink-0 w-full">
+    <div className="bg-[#ff6b6b] content-stretch flex flex-col items-start pb-[24px] sm:pb-[32px] pl-[24px] sm:pl-[50px] pr-[16px] sm:pr-[24px] pt-[24px] sm:pt-[32px] relative rounded-[13px] sm:rounded-[20px] shrink-0 md:shrink flex-1 w-full">
       <RedIntelligenceContent />
     </div>
   );
@@ -454,8 +454,8 @@ function RedIntelligenceCard() {
 
 function HeroMetricsRow() {
   return (
-    <div className="flex flex-col md:flex-row items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0 gap-[16px] sm:gap-[24px] md:gap-0">
-      <div className="flex flex-col md:flex-row gap-[16px] sm:gap-[24px] items-center relative shrink-0 w-full">
+    <div className="flex flex-col items-start justify-start relative shrink-0 w-full px-[16px] sm:px-[24px] md:px-0">
+      <div className="flex flex-col md:flex-row gap-[16px] sm:gap-[24px] items-stretch relative shrink-0 w-full">
         <GlobalAlignedBlackCard />
         <RedIntelligenceCard />
       </div>
