@@ -64,7 +64,7 @@ export default function ContactPage() {
     <>
       <SharedNavbar />
       <div className="bg-[#f7f3eb] w-full min-h-screen overflow-x-hidden relative">
-        <main className="pt-[120px] sm:pt-[140px] md:pt-[160px] pb-[48px] sm:pb-[64px] md:pb-[80px] px-[16px] sm:px-[24px]">
+        <main className="contact-page-main pt-[120px] sm:pt-[140px] md:pt-[160px] pb-[48px] sm:pb-[64px] md:pb-[80px] px-[16px] sm:px-[24px]">
           <div className="max-w-[1240px] mx-auto w-full">
             <h1 className="contact-title text-center">Contact Us</h1>
             <p className="contact-description text-center">
@@ -158,7 +158,7 @@ export default function ContactPage() {
           </div>
         </main>
         {/* Large vertical spacing before footer */}
-        <div className="w-full h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]" />
+        <div className="contact-footer-spacer w-full h-[80px] sm:h-[120px] md:h-[160px] lg:h-[200px]" />
         <SharedFooter />
       </div>
     </>

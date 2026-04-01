@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router";
 import { ImageTrail } from "../../app/components/ui/image-trail";
-import Navbar from "../../app/components/Navbar";
 import "../../styles/gco/HeroSection.css";
 import logoEducation from "../../assets/gco/logo-education.png";
 import logoPolicy from "../../assets/gco/logo-education-policy2020.jpg";
+import "../../styles/fonts.css";
 
 function HeroSection() {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ function HeroSection() {
       </ImageTrail>
       <div className="overlay">
         <div className="hero-content">
-          <h1 className="hero-title" style={{marginTop: "150px"}}>
+          <h1 className="hero-title" style={{ marginTop: "150px", fontFamily: "'OV Soge', sans-serif" }}>
             Global Capability Olympiad
           </h1>
           <p className="hero-subtitle">
