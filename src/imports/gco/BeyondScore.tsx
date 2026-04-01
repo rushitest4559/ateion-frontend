@@ -144,7 +144,7 @@ export default function BeyondScoreClone() {
             position: "relative",
             height: isTablet ? "auto" : "600px",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: isTablet ? "flex-start" : "center",
             alignItems: "center",
             zIndex: 1,
             width: "100%",
