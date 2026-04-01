@@ -249,20 +249,6 @@ function ExploreButton() {
         transition: "background 0.2s",
       }}
     >
-      <span
-        className="flex items-center justify-center rounded-full bg-white bg-opacity-25"
-        style={{ width: "clamp(24px,2vw,30px)", height: "clamp(24px,2vw,30px)" }}
-      >
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8"
-            stroke="white"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </span>
       Explore more
     </motion.button>
   );
