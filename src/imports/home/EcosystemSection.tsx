@@ -5,10 +5,10 @@ import svgPaths from "../svg-paths";
 function Tag({ text, className = "" }: { text: string; className?: string }) {
   return (
     <div
-      className={`border-[#272424] border-[0.6px] border-solid rounded-full px-4 py-1.5 h-[30px] flex items-center justify-center bg-transparent ${className}`}
+      className={`border-[#272424] border-[0.6px] border-solid rounded-full px-6 py-2 h-[54px] flex items-center justify-center bg-transparent ${className}`}
     >
       <p
-        className="font-['DM Sans',sans-serif] font-normal leading-none text-[#272424] text-[13px] text-center pt-[1px]"
+        className="font-['Outfit',sans-serif] font-normal leading-none text-[#272424] text-[17px] text-center pt-[1px]"
         style={{ fontVariationSettings: "'opsz' 14" }}
       >
         {text}
@@ -144,14 +144,23 @@ function EcosystemBubble({
       <motion.div
         className="absolute inset-0"
         animate={{
-          y: isHovered ? 0 : [0, -6, 0],
+          y: isHovered ? 0 : [0, -8, 0],
+          rotate: isHovered ? 0 : [0, 1, -1, 0],
         }}
         transition={{
           y: {
-            duration: 4,
+            duration: 6,
             repeat: Infinity,
             ease: "easeInOut",
           },
+          rotate: {
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          },
+        }}
+        style={{
+          filter: isHovered ? "drop-shadow(0 0 20px rgba(30, 22, 50, 0.6))" : "none",
         }}
       >
         <svg
@@ -181,16 +190,16 @@ function EcosystemBubble({
             cy="50"
             r="49.5"
             animate={{
-              fill: isHovered ? (hoverColor === "#FF595B" ? "#FF595B" : "#1E1632") : defaultColor,
+              fill: isHovered ? (hoverColor === "#FF595B" ? "#FF595B" : gradientId ? `url(#${gradientId})` : "#1E1632") : defaultColor,
               stroke: isHovered
                 ? hoverColor
                 : defaultColor !== "transparent"
                 ? defaultColor
                 : "rgba(0,0,0,0.15)",
-              strokeWidth: isHovered ? 2.5 : 0.8,
-              scale: isHovered ? 1.08 : 1,
+              strokeWidth: isHovered ? 3 : 0.8,
+              scale: isHovered ? 1.12 : 1,
             }}
-            transition={{ type: "spring", stiffness: 350, damping: 25 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
         </svg>
       </motion.div>
