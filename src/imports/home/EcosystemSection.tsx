@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import svgPaths from "../../imports/svg-paths";
+import svgPaths from "../svg-paths";
 
 function Tag({ text, className = "" }: { text: string; className?: string }) {
   return (
@@ -187,11 +187,7 @@ function EcosystemBubble({
             cy="50"
             r="49.5"
             animate={{
-              fill: isHovered
-                ? gradientId
-                  ? `url(#${gradientId})`
-                  : "rgba(255,255,255,0.1)"
-                : defaultColor,
+              fill: isHovered ? "#FF595B" : defaultColor,
               stroke: isHovered
                 ? hoverColor
                 : defaultColor !== "transparent"

@@ -5,10 +5,12 @@
 }
 
 .faq-title {
-  text-align: center;
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
-  font-family: 'SF Pro Display', sans-serif;
-  margin-bottom: 48px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #1a1b22;
+  margin-bottom: 0.75rem;
+  font-family: 'OV Soge', sans-serif;
 }
 
 .faq-list {
